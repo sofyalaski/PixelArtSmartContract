@@ -9,7 +9,7 @@
 - [Authors](#authors)
 
 
-## Context <a name="introduction"></a>
+## Context <a name="context"></a>
 In this project, the aim was to design simple pixel editor to create and publish the NFTs with using the IPFS(Pinata). The smart contract that with a structure  inherited by ERC 721 single token was implemented. The Pixel Art UI in React was created by following this tutorial:https://github.com/alekspopovic/pixel-art-drawing-editor
 
 ## Application Design <a name="application-design"></a>
@@ -33,11 +33,19 @@ All design principles are explained in below.
 Smart Contract is the back-end side of the project. The operations related with minting NFT are performed over abi file of smart contract. 
 - ‘mintPixelArt’ function in the smart contract file collects
     - the address of the recipient using MetaMask and 
-    - URI of the token that was previously uploaded to Pinata as parameters. 
+    - URI of the token that was the metadata of previously uploaded to Pinata and other entered values such as name and definition on the page.
 
 - The ID of the token is incremented over each transaction. 
 
 The NFT objects are stored off-chain to secure the data. This situation is solved with IPFS(Interplanetary File System), which allows peer-to-peer protocol to share and store files. Pinata is used for uploading images to the cloud and later on they can be sent to receivers.
+
+We have used the stacks given below,
+- Alchemy Web3 API for making requests to Ethereum Blockchain without needing any of our own nodes.
+- Hardhat and Ether.js for compiling and deploying the our smart contract to Ropsten Test Network
+- OpenZeppelin classes for creating valid NFTs in terms of ERC-721 standards and providing uniqueness of items.
+
+In order for anyone to be able to mint an NFT using our smart contract, we have removed onlyOwner features from the smart contract. Besides, NFTs are non-payable.
+
 
 After copying the URL of the image on Pinata, the URL, name and description on the application that the user entered are sent to blockchain as a JSON object. 
 
@@ -58,6 +66,8 @@ npm install
 cd minter
 npm start
 ```
+The application is currently deployed to [the Github Pages](https://esragucukbel.github.io/PixelArtSmartContract/).
+
 
 ## Screencast <a name="screencast"></a>
 
