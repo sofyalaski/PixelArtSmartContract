@@ -1,0 +1,96 @@
+@import "properties.scss";
+
+#title-pixel-art{
+  font-family:'Ink Free';
+  font-size: 2.5em;
+  width: 15em;
+}
+
+
+#form-nft-info{
+  border-radius: 0.25rem;
+  margin-top: 1.5rem;
+
+}
+
+input{
+  border-radius: 0.25rem;
+
+}
+
+#minter {
+  border: 1px solid $red;
+  border-radius: 0.25rem;
+  padding: 1rem 4rem 2rem 4rem;
+  margin-top: 2rem;
+  width: 6em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    margin-bottom: 2.5rem;
+    margin-top: 1.5rem;
+    width: 2.5em;
+  }
+
+  h2 {
+    margin-bottom: 1em;
+  }
+
+  #options {
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    justify-content: center;
+
+    .option {
+      display: flex;
+      flex-direction: column;
+      
+    }
+
+    .panelInput {
+      height: 6rem;
+      width: 6rem;
+      font-size: 2rem;
+      text-align: center;
+      background-color: $black;
+      color: $white;
+      border: 1px solid $grey;
+      border-radius: 0.25rem;
+      margin: 0 1rem 0.5rem 1rem;
+      padding-left: 1rem;
+
+      &:focus {
+        outline: none !important;
+        border-color: $red;
+        box-shadow: 0 0 0.5rem $grey;
+      }
+    }
+  }
+
+  .button {
+    font-size: 1.25rem;
+    background-color: $red;
+    color: $white;
+    padding: 1rem 3rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    transition: background-color 0.2s ease-in-out;
+    margin-bottom: 2rem;
+
+    &:hover {
+      cursor: pointer;
+      background-color: transparent;
+      border-color: $red;
+    }
+  }
+
+  .circle-picker {
+    margin-bottom: 1.5rem !important;
+    margin-top: 3.5em;
+  }
+}

@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+  margin: 0;
+  font-family: 'Rubik';
+  background: #ebe3e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #254cdd;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar, .container{
+    background-color: rgb(160, 160, 202);
+    width: 800px;
+    border-radius: 3px;
+}
+.navbar{
+    padding: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn, input{
+    height: 35px;
+    padding: 0 1em;
+}
+.color{
+    padding: 0 .25em;
+    width: 100px;
+    margin: 0 1em;
+}
+
+.container{
+    --size: 4;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(var(--size), 1fr);
+    grid-template-rows: repeat(var(--size), 1fr);
+    gap: 3px;
+    padding: 3px;
+}
+.pixel{
+    background-color: rgb(61, 61, 61);
+    border-radius: 2px;
+}
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.Minter {
+  max-width: 80vh;
+  max-height: 80vh;
+  padding: 60px 100px;
+  margin: 0 auto;
+  text-align: left;
+
+}
+
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  font-size: 16px;
+  width: 100%;
+  border-color: rgba(4, 4, 5, 0.1);
+  line-height: 32px;
+}
+
+input:focus {
+  outline: none;
+  border-color: rgba(4, 4, 5, 0.4);
+}
+
+canvas {
+	margin: 50px auto;
+	border: #89b 20px solid;
+	border-radius: 24px;
+}
+#container {
+	width: 100%;
+}
+
+#data {
+	color: #212121;
+}
+
+.swatch-container {
+	width: 540px;
+	padding: 5px 0px;
+	border: #89b 1px solid;
+	border-radius: 8px;
+	overflow-wrap: normal;
+	text-align: left;
+	overflow: hidden;
+}
+
+.swatch-color {
+	display: block;
+	border: solid #212121 2px;
+	border-radius: 50%;
+	width: 56px;
+	height: 56px;
+	background: #0088ff;
+	margin: 15px 15px;
+	float: left;
+	cursor: pointer;
+}
+.info-text {
+	margin-left: 20px;
+	font: 15px Arial, sans-serif;
+	color: #89b;
+}
+
+.eraser {
+	background: white;
+}
+
+.tag {
+	background-color: #dc3545;
+	display: inline;
+    padding: .2em .5em .2em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+a.buttons{
+	display:inline-block;
+	padding:0.3em 1.2em;
+	margin:0.3em 0.3em 0.3em 0.3em;
+	border-radius:2em;
+	box-sizing: border-box;
+	text-decoration:none;
+	font-size: 20px;
+	font-family:'Ink Free';
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#264653;
+	text-align:center;
+	transition: all 0.2s;
+	width: 10em;
+	height: 2em;
+	}
+	a.buttons:hover{
+	background-color:#264653;;
+	}
+	@media all and (max-width:30em){
+	a.buttons{
+	display:block;
+	margin:0.2em auto;}
+	}
+
+.fixed-header{
+		top: 0;
+		font-family: 'Ink Free';
+		font-weight: bold;
+		font-size: 20px;
+		width: 100%;
+        position: fixed;        
+        background: #264653;
+		border-radius: 2%;
+        padding: 10px 0;
+        color: #fff;
+
+	}
+.nft-info-label{
+	font-family: 'Ink Free';
+	font-weight: bold;
+	font-size: 20px;
+	margin:0.2em auto;
+}
+
+.nft-info-text{
+	font-family: 'Ink Free';
+	font-weight: bold;
+	font-size: 20px;
+	height: 40px;
+	width: 440px;
+	margin:0.2em auto;
+	border-radius: 10%;
+	border-width: 4px;
+}
+button {
+  padding: 9px 16px;
+  max-height: 40px;
+  border-color: #254cdd;
+  color: #254cdd;
+  background-color: white;
+  border-radius: 8px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  font-weight: bold;
+  cursor:pointer;
+}
+
+#title {
+  padding-top: 32px;
+}
+
+#status {
+  color:red;
+}
+
+.uploadFile {
+  border: 4px dashed rgba(4, 4, 5, 0.1);
+  border-radius: 16px;
+  text-align: center;
+  padding: 32px 60px;
+}
+
+#walletButton {
+  text-align: right;
+  float:right;
+  margin-bottom: 50px;
+  line-height: 16px;
+  width:auto;
+}
+
+#mintButton {
+  margin-top: 40px;
+  background-color: #254cdd;
+  color:white;
+}
