@@ -10,7 +10,7 @@
 
 
 ## Context <a name="introduction"></a>
-In this project, the aim was to design simple pixel editor to create NFT work and publishing the NFTs with using the IPFS(Pinata). The smart contract that is inherited by ERC 721 single token was implemented. 
+In this project, the aim was to design simple pixel editor to create and publish the NFTs with using the IPFS(Pinata). The smart contract that with a structure  inherited by ERC 721 single token was implemented. The Pixel Art UI in React was created by following this tutorial:https://github.com/alekspopovic/pixel-art-drawing-editor
 
 ## Application Design <a name="application-design"></a>
 
@@ -25,6 +25,9 @@ All design principles are explained in below.
     - If there is enough fund in teh account of the user, the transaction will be sent to Ethereum Blockchain to be confirmed.
     - After confirmations and block is approved, the user can see the assets in their accounts.
 
+![Screenshot from 2022-02-07 20-24-15](https://user-images.githubusercontent.com/44316816/152857869-7bc50e70-02e1-460e-a4f3-b9ee7519e528.png)
+
+
 ## Smart Contract <a name="smart-contract"></a>
 
 Smart Contract is the back-end side of the project. The operations related with minting NFT are performed over abi file of smart contract. 
@@ -38,7 +41,10 @@ The NFT objects are stored off-chain to secure the data. This situation is solve
 
 After copying the URL of the image on Pinata, the URL, name and description on the application that the user entered are sent to blockchain as a JSON object. 
 
-The address of smart contract is "0x54ABE227FdD1c6C1BcBA88E72255221B2319a21e"
+The address of smart contract is "0x1624D0d4Bf09cb353D417a36a78cBFd53c1a0044"
+The ABI file is avaiable under artifacts/contracts/MyNFT.sol/PixelArt.json
+![Screenshot from 2022-02-07 20-24-50](https://user-images.githubusercontent.com/44316816/152858351-1a70ec74-ba11-4d1d-93d7-f65b85ab3555.png)
+
 
 
 ## Running the Application <a name="running-the-application"></a>
